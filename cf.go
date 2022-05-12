@@ -1,4 +1,4 @@
-package cf
+package main
 
 import (
 	"fmt"
