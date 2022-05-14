@@ -8,9 +8,9 @@ import (
 )
 
 func init() {
-	RootCmd.AddCommand(&podRootCmd) //将父命令注册到根命令
+	RootCmd.AddCommand(&podRootCmd) //registry cmd to RootCmd
 
-	podRootCmd.AddCommand(podCreateCmd) // 将 子命令 create  注册到 父命令 pod
+	podRootCmd.AddCommand(podCreateCmd) //
 
 	// 创建 Pod 的选项参数
 	podCreateCmd.Flags().StringVar(&podCreateName, "name", "", "pod name")
@@ -33,11 +33,11 @@ var podCreateImage string
 
 var podCreateCmd = &cobra.Command{
 	Use:                   "create",
-	Short:                 "将指定的版本发布到指定的环境",
+	Short:                 "xx",
 	Long:                  ``,
 	DisableFlagsInUseLine: false,
 	//Args:                  cobra.NoArgs,
-	//	Args: cobra.ExactArgs(1), //指定只接收一个参数  作为app name
+	//	Args: cobra.ExactArgs(1), // must one arg
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(strings.Join(args, " "))
 	},

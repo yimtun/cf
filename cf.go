@@ -6,8 +6,16 @@ import (
 	"os"
 )
 
-func main() {
 
+
+
+
+
+
+func main() {
+	// first get userToken from thoreau-api-server os.Getenv("thoreau-token")
+	// and  get all resource  and privileges list for current user
+	//
 	execute()
 }
 

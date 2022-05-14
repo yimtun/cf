@@ -29,8 +29,8 @@ var listAppCmd = &cobra.Command{
 	DisableFlagsInUseLine: false,
 	Args:                  cobra.MaximumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("参数列表", args)
-		fmt.Println("选项后的值", envName)
+		fmt.Println("args", args)
+		fmt.Println("op val", envName)
 	},
 }
 
@@ -40,7 +40,7 @@ var listEnvCmd = &cobra.Command{
 	DisableFlagsInUseLine: false,
 	Args:                  cobra.NoArgs,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("参数列表", args)
-		fmt.Println("选项后的值", envName)
+		fmt.Println("args", args)
+		fmt.Println("op val", envName)
 	},
 }

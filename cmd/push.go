@@ -26,7 +26,7 @@ func init() {
 
 var pushRootCmd = cobra.Command{
 	Use:   "push",
-	Short: "发布代码到指定的测试环境",
+	Short: "deploy app to a env",
 }
 
 //var age int
@@ -34,12 +34,12 @@ var appname string
 
 var pushAppCmd = &cobra.Command{
 	Use: "app appname",
-	//Short:                 "发布版本到指定环境",
+	//Short:                 "",
 	//Long:                  ``,
-	Example:               "push app lz-eoms-hr -e test",
+	Example:               "push app  eureka-app -e test",
 	DisableFlagsInUseLine: false,
 	//Args:                  cobra.NoArgs,
-	Args: cobra.ExactArgs(1), //指定只接收一个参数  作为app name
+	Args: cobra.ExactArgs(1), //
 	//Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		//fmt.Println(strings.Join(args, " "))
